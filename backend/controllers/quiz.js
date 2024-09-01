@@ -4,7 +4,7 @@ const Quiz = require("../models/quiz");
 exports.createQuizOrPoll = async (req, res) => {
   try {
     const userId = req.user._id;
-    console.log("User______123456__________ Id", req);
+    console.log("User______123456__________ Id",userId);
     const { quizName, quizType, questions } = req.body;
 
     if (!["Q&A", "Poll"].includes(quizType)) {
@@ -67,13 +67,23 @@ exports.createQuizOrPoll = async (req, res) => {
         });
       }
     }
+    let createdDocument;
+    if (quizType === "Q&A") {
+      const newQuiz = new Quiz({
+        quizName,
+        quizType,
+        questions,
+      });
+      createdDocument = await newQuiz.save();
+    } else if (quizType === "Poll") {
+      const newPoll = new Quiz({
+        quizName,
+        quizType,
+        questions,
+      });
+      createdDocument = await newPoll.save();
+    }
 
-    const newQuiz = new Quiz({
-      quizName,
-      quizType,
-      questions,
-    });
-    const createdDocument = await newQuiz.save();
 
     const user = await User.findById(userId);
     if (!user) {

@@ -29,7 +29,8 @@ const QuizOrPollType = ({
   ]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [errorMessage, setErrorMessage] = useState("");
-  const token = useSelector((state) => state.token);
+  const token =
+    useSelector((state) => state.token) || localStorage.getItem("token");
 
   useEffect(() => {
     if (isEditMode && quiz) {
@@ -270,6 +271,7 @@ const QuizOrPollType = ({
 
   const handleCreateQuiz = async () => {
     if (!validateQuizCreation()) return;
+    console.log("Hello World")
     const quizData = questions.map((question) => {
       const preparedOptions = question.options.map((option) => ({
         type:
@@ -286,9 +288,11 @@ const QuizOrPollType = ({
       return {
         questionText: question.pollQuestion,
         options: preparedOptions,
-        ...(quizType === "Q&A" && { timeLimit: question.timeLimit }), // Corrected to "Q&A"
+        ...(quizType === "Q&A" && { timeLimit: question.timeLimit }), 
       };
     });
+    console.log("quizData________",quizData);
+    console.log("Token",token);
     const toastId = toast.loading("Creating quiz...");
     dispatch(setLoading(true));
     try {
