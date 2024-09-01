@@ -1,0 +1,11 @@
+
+.errorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem; 
+    color: white;
+    height: 100vh;
+    width: 100vw; 
+    background-color: #333; 
+}

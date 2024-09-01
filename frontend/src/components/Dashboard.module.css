@@ -1,0 +1,234 @@
+.dashboard {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  min-width: 650px;
+  background-color:#EDEDED;
+  overflow-y: hidden;
+}
+.mainContent {
+  width: 15%;
+  background-color: white;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+}
+.logo {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: "Jomhuria", sans-serif;
+}
+.nav {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav li {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+.nav li.active {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 10px;
+}
+.logout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logoutLine {
+  width: 124px;
+  border: 1px solid #000000;
+}
+.logout p {
+  font-weight: 700;
+  margin: 0;
+  padding-top: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.mainContent {
+  flex: 1;
+  padding: 40px;
+  background-color: #f2f2f2;
+}
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+  gap: 10px;
+}
+.statCardRed {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  color: #ff6700;
+  text-align: center;
+}
+.statCardGreen {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  color: #60b84b;
+  text-align: center;
+}
+.statCardBlue {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  color: #5076ff;
+  text-align: center;
+}
+.text {
+  font-size: 1.4em;
+  width: 20vw !important;
+  height: 5vh;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 1em;
+}
+.orangeText {
+  color: #ff6700;
+  font-size: 3.75em;
+  font-weight: 600;
+  line-height: 1em;
+  margin-right: 1vw;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+.greenText {
+  color: #4caf50;
+  font-size: 3.75em;
+  font-weight: 600;
+  line-height: 1em;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+.blueText {
+  color: #3b82f6;
+  font-size: 3.75em;
+  font-weight: 600;
+  line-height: 1em;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+.trendingQuizzes {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.trendingQuizzes h2 {
+  margin-bottom: 40px;
+  font-size: 24px;
+  
+}
+.quizList {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  gap: 3vw;
+  max-height: 350px;
+}
+.quizCard {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 15vw;
+  min-width: 150px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.quizdetails {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  
+ 
+}
+.quizCard h4 {
+  margin: 0 0 4px;
+  font-size: 23px;
+  font-weight: 600;
+  width: 10vw;
+  min-width: 70px;
+  overflow: hidden;   
+  font-family: "Poppins", sans-serif;
+}
+
+.quizCard p {
+  margin: 5px 0;
+  color: #60b84b;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16.5px;
+  font-family: "Poppins", sans-serif;
+}
+.eyeIcon {
+  width: 15.5px;
+  height: 14.75px;
+}
+.analyticsNumber {
+  color: #ff5d01;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+.sideData {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.paragraph{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  color: #3b82f6;
+  font-weight: 700;
+}
+
+.quizList::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.quizList::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0; 
+  border-radius: 6px; 
+}
+
+.quizList::-webkit-scrollbar-thumb:hover {
+  background-color: #a4a1a1; 
+}
+
+.quizList::-webkit-scrollbar-track {
+ background: #EDEDED;; ; 
+  border-radius: 6px; 
+}

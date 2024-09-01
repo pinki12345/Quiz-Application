@@ -1,0 +1,100 @@
+.container {
+  height: 100vh;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  background-color: #ededed;
+  min-width: 650px;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.heading {
+  color: #4a6df5;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.metadata {
+  text-align: right;
+  color: #ff5400;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.questionsWrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.questionBlock {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.questionBlock h3 {
+  margin-bottom: 15px;
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 2vw;
+  margin-bottom: 10px;
+}
+
+.statBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  gap: 10px;
+  width: 30%;
+}
+
+.number {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.optionVotes {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+}
+
+.optionText {
+  font-size: 18px;
+}
+
+.optionNumber {
+  font-size: 16px;
+}
+
+.questionsWrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.questionsWrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.questionsWrapper::-webkit-scrollbar-thumb {
+  background: #c9c8c8;
+  border-radius: 8px;
+}
+
+.questionsWrapper::-webkit-scrollbar-thumb:hover {
+  background: #cacaca;
+}

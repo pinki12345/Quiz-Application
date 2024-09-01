@@ -1,0 +1,113 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30vw;
+  min-width: 270px;
+  text-align: center;
+}
+
+.modalContent h3 {
+  margin-bottom: 15px;
+}
+
+.modalContent input {
+  width: 90%;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+  box-shadow:  0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.quizType {
+  margin-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.quizType h3 {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  line-height: 32px;
+  color: #9f9f9f;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+.qna,
+.poll {
+    width: 8vw;
+    min-width: 70px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    line-height: 32px;
+    color: #9f9f9f;
+    background-color: #ffffff;
+    box-shadow:  0 0 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+.modalActions {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.cancelButton {
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 12vw;
+  min-width: 120px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  background-color: #ffffff;
+  box-shadow:  0 0 8px rgba(0, 0, 0, 0.2);  
+}
+.selected {
+  background-color: #60B84B;
+  color: white;
+}
+
+.continueButton {
+  background-color: #4caf50;
+  min-width: 120px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  width: 12vw;
+}
