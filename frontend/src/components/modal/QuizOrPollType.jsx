@@ -289,7 +289,6 @@ const QuizOrPollType = ({
         ...(quizType === "Q&A" && { timeLimit: question.timeLimit }), // Corrected to "Q&A"
       };
     });
-    console.log("Create quiz_____", quizData);
     const toastId = toast.loading("Creating quiz...");
     dispatch(setLoading(true));
     try {

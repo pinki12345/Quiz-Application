@@ -82,7 +82,7 @@ exports.createQuizOrPoll = async (req, res) => {
     user.quizzes.push(createdDocument._id);
     await user.save();
 
-    const link = `http://localhost:5173/quizInterface/${createdDocument._id}`;
+    const link = `https://quiz-application-blue-one.vercel.app/quizInterface/${createdDocument._id}`;
     res.status(201).json({
       success: true,
       message: `${quizType} created successfully!`,
